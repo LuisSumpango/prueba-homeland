@@ -1,0 +1,319 @@
+.table-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.table-header {
+    background-color: #1a252f;
+    padding: 12px;
+    text-align: left;
+}
+
+.table-cell {
+    padding: 10px 12px;
+    border-bottom: 1px solid #34495e;
+}
+
+.table-row:hover {
+    background-color: #34495e;
+}
+
+.table-row:nth-child(even) {
+    background-color: #2c3e50;
+}
+
+/* Boton para crear */
+.button_create:hover{
+    color: #ffffff;
+    background: #24ae42;
+    box-shadow: 0 0 10px #24ae42,
+    0 0 40px #24ae42,
+    0 0 80px #24ae42;
+}
+
+.button_create {
+    width: 400px;
+    margin: 50px auto;
+    padding: 10px 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 3px #cccccc;
+}
+
+/* Boton para editar */
+.button_edit:hover{
+    color: #ffffff;
+    background: yellow;
+    box-shadow: 0 0 10px yellow,
+    0 0 40px yellow,
+    0 0 80px yellow;
+}
+
+.button_edit {
+    width: 50px;
+    margin: 50px auto;
+    padding: 10px 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 3px yellow;
+}
+
+/* Boton para eliminar */
+.button_delete:hover{
+    color: white;
+    background: red;
+    box-shadow: 0 0 10px red,
+    0 0 40px red,
+    0 0 80px red;
+}
+
+.button_delete {
+    width: 50px;
+    margin: 50px auto;
+    padding: 10px 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 3px red;
+}
+
+.btn{
+    border: #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* Acá empeza mi css para el modal */
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    border: none;
+    position: relative;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    color: #7f8c8d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close:hover {
+    color: #34495e;
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-control-file {
+    padding: 8px 0;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        margin: 15% auto;
+        width: 98%;
+        padding: 15px;
+    }
+    
+    .modal-title {
+        font-size: 1.3rem;
+    }
+    
+    .form-control {
+        padding: 8px 10px;
+    }
+}
+
+
+/* CSS para los modales de exito y fallo */
+.alert-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    z-index: 1100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.alert-success {
+    background-color: #28a745;
+    border-left: 5px solid #218838;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    border-left: 5px solid #c82333;
+}
+
+.close-message {
+    margin-left: 15px;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.close-message:hover {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
